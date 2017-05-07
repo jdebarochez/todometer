@@ -1,5 +1,3 @@
-'use babel';
-
 import React from 'react';
 import { connect } from 'react-redux';
 import { addItem, updateItem, deleteItem, resetAll } from '../actions.js';

@@ -1,14 +1,14 @@
-'use babel';
-
-import React from 'react';
+import React, {Component} from 'react';
 import Date from './components/Date';
 import ItemList from './components/ItemList';
 
-export default class Main extends React.Component {
+class Main extends Component {
   render() {
-    return <div>
+    return (<div>
       <Date />
       <ItemList />
-    </div>;
+    </div>);
   }
 }
+
+export default Main;
