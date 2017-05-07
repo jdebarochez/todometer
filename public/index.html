@@ -2,9 +2,26 @@
 <html>
   <head>
     <title>todometer</title>
-    <link href="main.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://cassidoo.github.io/todometer/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+
+    <link rel="stylesheet" href="%PUBLIC_URL%/main.css">    
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
   </head>
   <body>
     <div id="app"></div>
+    
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
   </body>
 </html>

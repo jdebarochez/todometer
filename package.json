@@ -9,9 +9,9 @@
   "license": "MIT",
   "repository": "github.com/cassidoo/todometer",
   "scripts": {
-    "build:less": "lessc styles/global.less main.css",
+    "build:less": "lessc styles/global.less public/main.css",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && sw-precache --config=sw-precache-config.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -28,6 +28,7 @@
   "devDependencies": {
     "less": "^2.7.2",
     "react-scripts": "^0.9.5",
-    "redux-devtools-extension": "^2.13.0"
+    "redux-devtools-extension": "^2.13.0",
+    "sw-precache": "^5.1.1"
   }
 }
