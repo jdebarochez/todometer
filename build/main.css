@@ -25,7 +25,8 @@ body {
 body #app {
   position: relative;
   margin: 40px auto;
-  width: 550px;
+  width: 95%;
+  max-width: 33em;
 }
 ::-webkit-scrollbar {
   background-color: #403F4D;
@@ -43,6 +44,11 @@ body #app {
   justify-content: space-between;
   padding: 0 0 40px 0;
   font-size: 24px;
+}
+@media only screen and (max-width: 349px) {
+  .date .today {
+    display: none;
+  }
 }
 .date .calendar {
   display: flex;
@@ -121,6 +127,9 @@ body #app {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.item .buttons {
+  display: flex;
 }
 .item .buttons button {
   position: relative;
