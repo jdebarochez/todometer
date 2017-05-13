@@ -6,7 +6,7 @@ class Main extends Component {
   render() {
     return <div>
       <Date />
-      <ItemList />
+      <ItemList browser={this.props.browser}/>
     </div>;
   }
 }

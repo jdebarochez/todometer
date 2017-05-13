@@ -13,6 +13,9 @@
     height: 30px;
   }
 }
+:root {
+  --posx: 0px;
+}
 body {
   margin: 0;
   padding: 0;
@@ -108,6 +111,24 @@ body #app {
       animation: click .5s;
     }*/
 }
+.item-container {
+  position: relative;
+  overflow: hidden;
+}
+.item-container .item-background {
+  width: 50%;
+  height: 70px;
+  display: inline-block;
+  border: none;
+  border-radius: 3px;
+}
+.item-container .item-background.complete {
+  background-color: #62DCA5;
+}
+.item-container .item-background.pause {
+  background-color: #F7F879;
+  text-align: right;
+}
 .item {
   display: flex;
   align-items: center;
@@ -121,6 +142,15 @@ body #app {
   border-radius: 3px;
   box-sizing: border-box;
   font-size: 20px;
+}
+.item.item-touch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.item.item-touch.swipped {
+  left: var(--posx);
 }
 .item .item-name {
   width: 400px;

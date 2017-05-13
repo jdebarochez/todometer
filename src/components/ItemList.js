@@ -91,6 +91,7 @@ class ItemList extends React.Component {
                   onComplete={this.completeItem}
                   onDelete={this.props.deleteItem}
                   paused={true}
+                  touch={this.props.browser.touch}
                 />
               );
             })
@@ -124,6 +125,7 @@ class ItemList extends React.Component {
                 onComplete={this.completeItem}
                 onDelete={this.props.deleteItem}
                 onPause={this.pauseItem}
+                touch={this.props.browser.touch}
               />
             );
           })

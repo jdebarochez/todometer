@@ -1,3 +1,22 @@
+.item-container {
+  position: relative;
+  overflow: hidden;
+  .item-background {
+    width: 50%;
+    height: 70px;
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    &.complete {
+      background-color: @green;
+    }
+    &.pause {
+      background-color: @yellow;      
+      text-align: right;
+    }
+  }
+}
+
 .item {
   display: flex;
   align-items: center;
@@ -11,6 +30,16 @@
   border-radius: 3px;
   box-sizing: border-box;
   font-size: @item-font-size;
+  
+  &.item-touch {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 10;
+    &.swipped {
+      left: var(--posx);
+    }
+  }
   .item-name {
     width: 400px;
     text-overflow: ellipsis;

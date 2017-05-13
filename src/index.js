@@ -7,6 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { loadState, saveState } from './local-storage';
 import rootReducer from './reducers/index';
 import Main from './Main';
+import { loadBrowser } from './browser';
 
 const persistedState = loadState();
 let store = createStore(rootReducer,
@@ -22,9 +23,11 @@ store.subscribe(() => {
   saveState(store.getState());
 });
 
+const browser = loadBrowser();
+
 window.onload = function() {
   ReactDOM.render(
     <Provider store={store}>
-      <Main />
+      <Main browser={browser} />
     </Provider>, document.getElementById('app'));
 };
